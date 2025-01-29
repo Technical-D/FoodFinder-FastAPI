@@ -10,9 +10,9 @@ FOOD_SEARCH_URL = "https://platform.fatsecret.com/rest/server.api"
 def search_food(query:str):
     token = get_access_token()
     params = {
-        "method": "food.search",
+        "method": "foods.search",
         "format": "json",
-        "search_expression": query
+        "search_expression": query,
     }
 
     headers = {"Authorization": f"Bearer {token}"}
@@ -20,6 +20,7 @@ def search_food(query:str):
     response = requests.get(FOOD_SEARCH_URL, params=params, headers=headers)
 
     if response.status_code == 200:
+        print(response.status_code, response.text)
         return response.json
     else:
         raise HTTPException(status_code=response.status_code, detail="Failed to fetch data")
