@@ -4,6 +4,9 @@
 
 This project integrates the **FatSecret API** with **FastAPI** to securely fetch food-related data using **OAuth 2.0 authentication**. The application allows users to search for food items and retrieve detailed information such as nutritional values, ingredients, and more.
 
+## Swagger UI (/docs)
+![image](https://github.com/user-attachments/assets/4fb5b190-6218-4573-aecc-7a1209bf160c)
+
 ## Features
 - **OAuth 2.0 Authentication**: Secure handling of credentials and access tokens.
 - **IP Whitelisting**: Ensures only whitelisted IPs can access the API.
