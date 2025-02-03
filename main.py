@@ -10,7 +10,7 @@ FOOD_SEARCH_URL = "https://platform.fatsecret.com/rest/server.api"
 def search_food(query:str, page_number:int=0, max_results:int=10):
     token = get_access_token()
     params = {
-        "method": "foods.search",
+        "method": "foods.search.v3",
         "format": "json",
         "search_expression": query,
         "page_number": page_number,

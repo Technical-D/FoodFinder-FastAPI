@@ -11,7 +11,7 @@ TOKEN_URL = "https://oauth.fatsecret.com/connect/token"
 def get_access_token():
     data = {
         "grant_type": "client_credentials",
-        "scope": "basic"
+        "scope": "premier"
     }
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
     response = requests.post(TOKEN_URL, data=data, headers=headers, auth=(CLIENT_ID, CLIENT_SECRET))
